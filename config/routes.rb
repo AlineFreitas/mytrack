@@ -1,11 +1,12 @@
 Mytrack::Application.routes.draw do
-  get "pages/home"
+  #get "pages/about"
+  match "/about" => 'pages#about'
 
-  get "pages/about"
+  #get "pages/contact"
+  match "/contact" => 'pages#contact'
 
-  get "pages/contact"
-
-  get "pages/faq"
+  #get "pages/faq"
+  match "/faq" => 'pages#faq'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,6 +58,7 @@ Mytrack::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
